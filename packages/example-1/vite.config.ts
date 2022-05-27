@@ -7,5 +7,6 @@ export default defineConfig({
   plugins: [vanillaExtractPlugin(), solidPlugin(), WindiCSS()],
   build: {
     target: 'esnext',
+    cssCodeSplit: true
   },
 });

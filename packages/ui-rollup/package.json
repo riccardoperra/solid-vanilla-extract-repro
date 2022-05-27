@@ -6,7 +6,6 @@
     "build": "rollup -c"
   },
   "license": "MIT",
-  "sideEffects": false,
   "type": "module",
   "exports": {
     ".": {

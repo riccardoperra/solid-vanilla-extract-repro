@@ -14,11 +14,11 @@ import {createTheme, createThemeContract} from '@vanilla-extract/css';
  * - Comment the import
  * - Uncomment local theme contract
  */
-import {themeColors} from '@ui/vanilla-extract';
+import {themeColors} from '@ui/vanilla-extract-rollup';
 // export const themeColors = createThemeContract({
 //   primary: ''
 // });
 
 export const lightThemeCss = createTheme(themeColors, {
-  primary: 'red',
+  primary: 'blue',
 });
