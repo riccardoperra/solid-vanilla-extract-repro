@@ -1,6 +1,6 @@
 {
   "name": "@ui/vanilla-extract",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Vanilla extract repro bug",
   "scripts": {
     "dev": "vite",
@@ -19,25 +19,32 @@
     }
   },
   "dependencies": {
-    "solid-js": "^1.4.2",
+    "@floating-ui/core": "^0.7.1",
+    "@floating-ui/dom": "^0.5.1",
     "@vanilla-extract/css": "^1.7.0",
     "@vanilla-extract/dynamic": "^2.0.2",
     "@vanilla-extract/recipes": "^0.2.4",
-    "@vanilla-extract/sprinkles": "^1.4.1"
+    "@vanilla-extract/sprinkles": "^1.4.1",
+    "clsx": "^1.1.1",
+    "solid-headless": "^0.11.0",
+    "solid-js": "^1.4.2",
+    "solid-use": "^0.3.4"
   },
   "devDependencies": {
     "@types/node": "^17.0.35",
+    "@vanilla-extract/private": "^1.0.3",
+    "@vanilla-extract/vite-plugin": "3.1.4",
+    "csstype": "^3.1.0",
     "typescript": "^4.6.4",
     "vite": "^2.9.9",
-    "vite-plugin-solid": "^2.2.6",
     "vite-plugin-dts": "^1.1.1",
-    "@vanilla-extract/vite-plugin": "3.1.4"
+    "vite-plugin-solid": "^2.2.6"
   },
   "peerDependencies": {
-    "solid-js": "^1.4.2",
     "@vanilla-extract/css": "^1.7.0",
     "@vanilla-extract/dynamic": "^2.0.2",
     "@vanilla-extract/recipes": "^0.2.4",
-    "@vanilla-extract/sprinkles": "^1.4.1"
+    "@vanilla-extract/sprinkles": "^1.4.1",
+    "solid-js": "^1.4.2"
   }
 }

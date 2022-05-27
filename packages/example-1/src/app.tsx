@@ -1,14 +1,15 @@
-import type { Component } from 'solid-js';
-import { Link, useRoutes, useLocation } from 'solid-app-router';
+import type {Component} from 'solid-js';
+import {Link, useRoutes, useLocation} from 'solid-app-router';
 
-import { routes } from './routes';
+import {routes} from './routes';
+import {CodeImageThemeProvider} from "@ui/vanilla-extract";
 
 const App: Component = () => {
   const location = useLocation();
   const Route = useRoutes(routes);
 
   return (
-    <>
+    <CodeImageThemeProvider theme={{}}>
       <nav class="bg-gray-200 text-gray-900 px-4">
         <ul class="flex items-center">
           <li class="py-2 px-4">
@@ -40,9 +41,9 @@ const App: Component = () => {
       </nav>
 
       <main>
-        <Route />
+        <Route/>
       </main>
-    </>
+    </CodeImageThemeProvider>
   );
 };
 

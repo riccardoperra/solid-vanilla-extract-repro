@@ -1,10 +1,13 @@
-import { createSignal } from 'solid-js';
+import {createSignal} from 'solid-js';
+import {Box, Button} from "@ui/vanilla-extract";
+import {wrapper} from "./home.css";
+import {Scaffold} from "./components/Scaffold";
 
 export default function Home() {
   const [count, setCount] = createSignal(0);
 
   return (
-    <section class="bg-gray-100 text-gray-700 p-8">
+    <Scaffold>
       <h1 class="text-2xl font-bold">Home</h1>
       <p class="mt-4">This is the home page.</p>
 
@@ -24,7 +27,11 @@ export default function Home() {
         >
           +
         </button>
+
+        <Button color={'test'}>This is my broken button</Button>
+
+        <Box paddingLeft={2}>Box</Box>
       </div>
-    </section>
+    </Scaffold>
   );
 }

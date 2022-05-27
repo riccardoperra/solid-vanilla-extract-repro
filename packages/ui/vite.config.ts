@@ -1,6 +1,6 @@
-import {resolve} from 'path';
 import {defineConfig} from 'vite';
 import solidPlugin from 'vite-plugin-solid';
+import dts from 'vite-plugin-dts';
 
 import {dependencies, peerDependencies} from './package.json';
 
@@ -13,7 +13,15 @@ const externals = [
 
 
 export default defineConfig({
-  plugins: [solidPlugin()],
+  plugins: [
+    solidPlugin(),
+    dts({
+      skipDiagnostics: false,
+      logDiagnostics: true,
+      noEmitOnError: false
+
+
+    }),],
   build: {
     target: 'esnext',
     polyfillDynamicImport: false,

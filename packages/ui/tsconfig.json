@@ -6,10 +6,16 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "preserve",
+    "sourceMap": true,
     "jsxImportSource": "solid-js",
     "types": ["vite/client"],
     "noEmit": true,
     "isolatedModules": true,
-    "resolveJsonModule": true
-  }
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "preserveSymlinks": true
+  },
+  "include": [
+    "./src"
+  ]
 }
