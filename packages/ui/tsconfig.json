@@ -16,7 +16,5 @@
     "skipLibCheck": true,
     "preserveSymlinks": true
   },
-  "include": [
-    "./src"
-  ]
+  "include": ["./src"]
 }

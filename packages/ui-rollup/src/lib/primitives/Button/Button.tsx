@@ -1,7 +1,7 @@
-import {JSX, mergeProps} from "solid-js";
-import * as styles from './Button.css';
+import { JSX, mergeProps } from "solid-js";
+import * as styles from "./Button.css";
 
-export type ButtonProps = JSX.IntrinsicElements['button'] & styles.ButtonProps;
+export type ButtonProps = JSX.IntrinsicElements["button"] & styles.ButtonProps;
 
 export function Button(props: ButtonProps) {
   const propsWithDefault = mergeProps({}, props);
@@ -9,9 +9,10 @@ export function Button(props: ButtonProps) {
     <button
       {...propsWithDefault}
       class={styles.button({
-        test: props.test
-      })}>
+        test: props.test,
+      })}
+    >
       {propsWithDefault.children}
     </button>
-  )
+  );
 }

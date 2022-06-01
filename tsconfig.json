@@ -15,10 +15,7 @@
     "importsNotUsedAsValues": "remove",
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
-    "lib": [
-      "dom",
-      "ESNext"
-    ]
+    "lib": ["dom", "ESNext"]
   },
   "exclude": ["**/node_modules"],
   "ts-node": {
