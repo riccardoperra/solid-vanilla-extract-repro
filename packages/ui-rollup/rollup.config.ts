@@ -4,8 +4,10 @@ import {vanillaExtractPlugin} from '@vanilla-extract/rollup-plugin'
 export default withSolid({
   input: 'src/index.tsx',
   plugins: [
-    vanillaExtractPlugin()
+    // vanillaExtractPlugin()
   ],
+  targets: ["esm", "cjs"]
+
   // output: {
     // preserveModules: true,
     // assetFileNames({name}) {

@@ -10,19 +10,19 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@vanilla-extract/vite-plugin": "3.1.6",
     "vite": "^2.9.9",
     "vite-plugin-solid": "^2.2.6",
-    "vite-plugin-windicss": "^1.8.4",
-    "@vanilla-extract/vite-plugin": "3.1.4"
+    "vite-plugin-windicss": "^1.8.4"
   },
   "dependencies": {
     "@ui/vanilla-extract": "workspace:*",
     "@ui/vanilla-extract-rollup": "workspace:*",
-    "solid-app-router": "^0.3.3",
-    "solid-js": "^1.4.2",
-    "@vanilla-extract/css": "^1.7.0",
+    "@vanilla-extract/css": "^1.7.1",
     "@vanilla-extract/dynamic": "^2.0.2",
-    "@vanilla-extract/recipes": "^0.2.4",
-    "@vanilla-extract/sprinkles": "^1.4.1"
+    "@vanilla-extract/recipes": "^0.2.5",
+    "@vanilla-extract/sprinkles": "^1.4.1",
+    "solid-app-router": "^0.3.3",
+    "solid-js": "^1.4.3"
   }
 }

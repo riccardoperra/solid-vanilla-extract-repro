@@ -17,7 +17,7 @@
     "url": "https://github.com/riccardoperra/solid-vanilla-extract-repro/issues"
   },
   "dependencies": {
-    "pnpm": "^7.1.6"
+    "pnpm": "^7.1.7"
   },
   "homepage": "https://github.com/riccardoperra/solid-vanilla-extract-repro#readme"
 }
