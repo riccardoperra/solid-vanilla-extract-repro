@@ -25,9 +25,9 @@
   "dependencies": {
     "@vanilla-extract/css": "^1.7.1",
     "@vanilla-extract/dynamic": "^2.0.2",
+    "@vanilla-extract/private": "^1.0.3",
     "@vanilla-extract/recipes": "^0.2.5",
     "@vanilla-extract/sprinkles": "^1.4.1",
-    "@vanilla-extract/private": "^1.0.3",
     "solid-js": "^1.4.3"
   },
   "devDependencies": {
@@ -37,7 +37,8 @@
     "csstype": "^3.1.0",
     "rollup": "^2.75.5",
     "rollup-preset-solid": "1.4.0",
-    "typescript": "^4.7.2"
+    "typescript": "^4.7.2",
+    "vite-plugin-solid": "^2.2.6"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "^1.7.0",
