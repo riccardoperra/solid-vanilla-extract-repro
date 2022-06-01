@@ -5,8 +5,11 @@ importers:
   .:
     specifiers:
       pnpm: ^7.1.7
+      prettier: ^2.6.2
     dependencies:
       pnpm: 7.1.7
+    devDependencies:
+      prettier: 2.6.2
 
   packages/example-1:
     specifiers:
@@ -16,12 +19,11 @@ importers:
       '@vanilla-extract/dynamic': ^2.0.2
       '@vanilla-extract/recipes': ^0.2.5
       '@vanilla-extract/sprinkles': ^1.4.1
-      '@vanilla-extract/vite-plugin': 3.1.6
+      '@vanilla-extract/vite-plugin': 3.1.4
       solid-app-router: ^0.3.3
       solid-js: ^1.4.3
       vite: ^2.9.9
       vite-plugin-solid: ^2.2.6
-      vite-plugin-windicss: ^1.8.4
     dependencies:
       '@ui/vanilla-extract': link:../ui
       '@ui/vanilla-extract-rollup': link:../ui-rollup
@@ -32,10 +34,9 @@ importers:
       solid-app-router: 0.3.3_solid-js@1.4.3
       solid-js: 1.4.3
     devDependencies:
-      '@vanilla-extract/vite-plugin': 3.1.6_vite@2.9.9
+      '@vanilla-extract/vite-plugin': 3.1.4_vite@2.9.9
       vite: 2.9.9
       vite-plugin-solid: 2.2.6
-      vite-plugin-windicss: 1.8.4_vite@2.9.9
 
   packages/ui:
     specifiers:
@@ -85,12 +86,12 @@ importers:
     dependencies:
       '@vanilla-extract/css': 1.7.1
       '@vanilla-extract/dynamic': 2.0.2
+      '@vanilla-extract/private': 1.0.3
       '@vanilla-extract/recipes': 0.2.5_@vanilla-extract+css@1.7.1
       '@vanilla-extract/sprinkles': 1.4.1_@vanilla-extract+css@1.7.1
       solid-js: 1.4.3
     devDependencies:
       '@types/node': 17.0.38
-      '@vanilla-extract/private': 1.0.3
       '@vanilla-extract/rollup-plugin': 1.0.3_rollup@2.75.5
       csstype: 3.1.0
       rollup: 2.75.5
@@ -105,10 +106,6 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.13
-    dev: true
-
-  /@antfu/utils/0.5.2:
-    resolution: {integrity: sha512-CQkeV+oJxUazwjlHD0/3ZD08QWKuGQkhnrKo3e6ly5pd48VUpXbb77q0xMU4+vc2CkJnDS02Eq/M9ugyX20XZA==}
     dev: true
 
   /@babel/code-frame/7.16.7:
@@ -1527,6 +1524,18 @@ packages:
       '@vanilla-extract/private': 1.0.3
     dev: false
 
+  /@vanilla-extract/integration/3.0.1:
+    resolution: {integrity: sha512-4G4WgkalVRIsJyDb/X08S0xcG2eDm1RJvqIgji0D7HvOSeyD+nvPEhbq8FAxs7MeVyyPDoCWsCKQvS3f9jz9UA==}
+    dependencies:
+      '@vanilla-extract/css': 1.7.1
+      esbuild: 0.11.23
+      eval: 0.1.6
+      find-up: 5.0.0
+      javascript-stringify: 2.1.0
+      lodash: 4.17.21
+      outdent: 0.8.0
+    dev: true
+
   /@vanilla-extract/integration/4.0.1:
     resolution: {integrity: sha512-s/P7FynY2/LWMCGVgHTXOpfy4pH0+cTCtTgEZEVvmf2ErX5ZSSsFe1i9MzODCYTDuvV2MWFg7oOspwx7i70h+A==}
     dependencies:
@@ -1567,6 +1576,20 @@ packages:
       '@vanilla-extract/css': 1.7.1
     dev: false
 
+  /@vanilla-extract/vite-plugin/3.1.4_vite@2.9.9:
+    resolution: {integrity: sha512-FLORJJ92FbPSf2HLSQfs3GiYS/ceZUhBLB1vQ2dwmXCeybpIeTcettzSIYdbrkFNy2gHbLD9yRSTMg7nCPEqUw==}
+    peerDependencies:
+      vite: ^2.2.3
+    dependencies:
+      '@vanilla-extract/integration': 3.0.1
+      outdent: 0.8.0
+      postcss: 8.4.14
+      postcss-load-config: 3.1.4_postcss@8.4.14
+      vite: 2.9.9
+    transitivePeerDependencies:
+      - ts-node
+    dev: true
+
   /@vanilla-extract/vite-plugin/3.1.6_vite@2.9.9:
     resolution: {integrity: sha512-juOmYN9W4J9msg64qcLjVmvuxD+w2surZJyVNNwbX3iSiG47Brq4PbiDIL0oZFHuHFnNqdm+IO9gOwFNoHQprQ==}
     peerDependencies:
@@ -1579,30 +1602,6 @@ packages:
       vite: 2.9.9
     transitivePeerDependencies:
       - ts-node
-    dev: true
-
-  /@windicss/config/1.8.4:
-    resolution: {integrity: sha512-i4fFGFfZoRess6WMkauykHC3PFd9xKYVx7lSuLfMK7sgo6x3+l4dY42GbsWMHyLqH1sTMfyt1LgfXSIKYJozSA==}
-    dependencies:
-      debug: 4.3.4
-      jiti: 1.13.0
-      windicss: 3.5.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /@windicss/plugin-utils/1.8.4:
-    resolution: {integrity: sha512-DqJVwAfzlgd8nYSNlmhXOey32pI8UwH7QiOWdFS/AR2O/q9oLDGHDn97Its/kZdfoyhi8ylwZNP2Pk0H7cihhQ==}
-    dependencies:
-      '@antfu/utils': 0.5.2
-      '@windicss/config': 1.8.4
-      debug: 4.3.4
-      fast-glob: 3.2.11
-      magic-string: 0.26.2
-      micromatch: 4.0.5
-      windicss: 3.5.4
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /acorn/8.7.1:
@@ -2291,11 +2290,6 @@ packages:
       supports-color: 7.2.0
     dev: true
 
-  /jiti/1.13.0:
-    resolution: {integrity: sha512-/n9mNxZj/HDSrincJ6RP+L+yXbpnB8FybySBa+IjIaoH9FIxBbrbRT5XUbe8R7zuVM2AQqNMNDDqz0bzx3znOQ==}
-    hasBin: true
-    dev: true
-
   /jju/1.4.0:
     resolution: {integrity: sha512-8wb9Yw966OSxApiCt0K3yNJL8pnNeIv+OEq2YMidz4FKP6nonSRoOXc80iXY4JaN2FC11B9qsNmDsm+ZOfMROA==}
     dev: true
@@ -2339,10 +2333,6 @@ packages:
       graceful-fs: 4.2.10
     dev: true
 
-  /kolorist/1.5.1:
-    resolution: {integrity: sha512-lxpCM3HTvquGxKGzHeknB/sUjuVoUElLlfYnXZT73K8geR9jQbroGlSCFBax9/0mpGoD3kzcMLnOlGQPJJNyqQ==}
-    dev: true
-
   /lilconfig/2.0.5:
     resolution: {integrity: sha512-xaYmXZtTHPAw5m+xLN8ab9C+3a8YmV3asNSPOATITbtwrfbwaLJj8h66H1WMIpALCkqsIzK3h7oQ+PdX+LQ9Eg==}
     engines: {node: '>=10'}
@@ -2376,13 +2366,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
-    dev: true
-
-  /magic-string/0.26.2:
-    resolution: {integrity: sha512-NzzlXpclt5zAbmo6h6jNc8zl2gNRGHvmsZW4IvZhTC4W7k4OlLP+S5YLussa/r3ixNT66KOQfNORlXHSOy/X4A==}
-    engines: {node: '>=12'}
-    dependencies:
-      sourcemap-codec: 1.4.8
     dev: true
 
   /media-query-parser/2.0.2:
@@ -2526,6 +2509,12 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+    dev: true
+
+  /prettier/2.6.2:
+    resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /punycode/2.1.1:
@@ -2734,10 +2723,6 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /sourcemap-codec/1.4.8:
-    resolution: {integrity: sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==}
-    dev: true
-
   /sprintf-js/1.0.3:
     resolution: {integrity: sha1-BOaSb2YolTVPPdAVIDYzuFcpfiw=}
     dev: true
@@ -2903,20 +2888,6 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-windicss/1.8.4_vite@2.9.9:
-    resolution: {integrity: sha512-LSZAO8BZn3x406GRbYX5t5ONXXJVdqiQtN1qrznLA/Dy5/NzZVhfcrL6N1qEYYO7HsCDT4pLAjTzObvDnM9Y8A==}
-    peerDependencies:
-      vite: ^2.0.1
-    dependencies:
-      '@windicss/plugin-utils': 1.8.4
-      debug: 4.3.4
-      kolorist: 1.5.1
-      vite: 2.9.9
-      windicss: 3.5.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /vite/2.9.9:
     resolution: {integrity: sha512-ffaam+NgHfbEmfw/Vuh6BHKKlI/XIAhxE5QSS7gFLIngxg171mg1P3a4LSRME0z2ZU1ScxoKzphkipcYwSD5Ew==}
     engines: {node: '>=12.2.0'}
@@ -2939,12 +2910,6 @@ packages:
       rollup: 2.75.5
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
-
-  /windicss/3.5.4:
-    resolution: {integrity: sha512-x2Iu0a69dtNiKHMkR886lx0WKbZI5GqvXyvGBCJ2VA6rcjKYjnzCA/Ljd6hNQBfqlkSum8J+qAVcCfLzQFI4rQ==}
-    engines: {node: '>= 12'}
-    hasBin: true
     dev: true
 
   /yallist/4.0.0:

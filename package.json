@@ -19,5 +19,8 @@
   "dependencies": {
     "pnpm": "^7.1.7"
   },
-  "homepage": "https://github.com/riccardoperra/solid-vanilla-extract-repro#readme"
+  "homepage": "https://github.com/riccardoperra/solid-vanilla-extract-repro#readme",
+  "devDependencies": {
+    "prettier": "^2.6.2"
+  }
 }

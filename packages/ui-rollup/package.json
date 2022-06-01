@@ -27,6 +27,7 @@
     "@vanilla-extract/dynamic": "^2.0.2",
     "@vanilla-extract/recipes": "^0.2.5",
     "@vanilla-extract/sprinkles": "^1.4.1",
+    "@vanilla-extract/private": "^1.0.3",
     "solid-js": "^1.4.3"
   },
   "devDependencies": {

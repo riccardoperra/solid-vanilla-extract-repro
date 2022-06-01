@@ -10,10 +10,9 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@vanilla-extract/vite-plugin": "3.1.6",
+    "@vanilla-extract/vite-plugin": "3.1.4",
     "vite": "^2.9.9",
-    "vite-plugin-solid": "^2.2.6",
-    "vite-plugin-windicss": "^1.8.4"
+    "vite-plugin-solid": "^2.2.6"
   },
   "dependencies": {
     "@ui/vanilla-extract": "workspace:*",
