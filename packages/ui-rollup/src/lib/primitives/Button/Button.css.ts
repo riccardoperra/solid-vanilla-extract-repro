@@ -12,7 +12,7 @@ export const button = recipe({
   variants: {
     test: {
       true: {
-        backgroundColor: "blue",
+        backgroundColor: "red",
       },
     },
   },

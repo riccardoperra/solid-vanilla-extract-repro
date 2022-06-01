@@ -1,5 +1,4 @@
-import { createTheme } from "@vanilla-extract/css";
-
+// import { createTheme } from "@vanilla-extract/css";
 /**
  *
  * If `Theme Contract` is in an external library, throw error
@@ -14,7 +13,12 @@ import { createTheme } from "@vanilla-extract/css";
  * - Comment the import
  * - Uncomment local theme contract
  */
+import { createTheme } from "@vanilla-extract/css";
 import { themeColors } from "@ui/vanilla-extract-rollup";
-export const lightThemeCss = createTheme(themeColors, {
-  primary: "green",
+export const customThemeLocal = createTheme(themeColors, {
+  primary: "red",
 });
+
+// export const lightThemeCss = createTheme(themeColors, {
+//   primary: "blue",
+// });
