@@ -1,4 +1,3 @@
-import { style } from "@vanilla-extract/css";
 import { recipe, RecipeVariants } from "@vanilla-extract/recipes";
 import { themeColors } from "../../theme";
 
