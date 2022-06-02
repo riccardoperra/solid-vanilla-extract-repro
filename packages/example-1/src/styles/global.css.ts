@@ -1,4 +1,5 @@
-import { globalStyle } from "@vanilla-extract/css";
+import { globalStyle, style } from "@vanilla-extract/css";
+import { uiVariables } from "@ui/vanilla-extract-rollup";
 
 globalStyle("body", {
   fontFamily: "Inter, system-ui, -apple-system, sans-serif",
@@ -9,3 +10,10 @@ globalStyle("body", {
     },
   },
 });
+
+export const testClass = style([
+  uiVariables.exampleTheme,
+  {
+    color: uiVariables.exampleVars.bg,
+  },
+]);

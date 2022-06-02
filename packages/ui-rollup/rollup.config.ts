@@ -1,6 +1,9 @@
 import withSolid from "rollup-preset-solid";
-import { vanillaExtractPlugin } from "@vanilla-extract/rollup-plugin";
 import { dependencies, peerDependencies } from "./package.json";
+
+const {
+  vanillaExtractPlugin,
+} = require("./vanilla-extract-fix/vanilla-extract-plugin-rollup");
 
 const externals = [
   ...Object.keys(peerDependencies),
@@ -18,21 +21,19 @@ export default withSolid({
   output: [
     {
       preserveModules: true,
-      entryFileNames: "[name].js",
-      assetFileNames({ name }) {
-        return name?.replace(/^src\//, "") ?? "";
+      preserveModulesRoot: "src",
+      // Change .css.js files to something else so that they don't get re-processed by consumer's setup
+      entryFileNames({ name }) {
+        return `${name.replace(/\.css$/, ".css.vanilla")}.js`;
       },
+      // Apply preserveModulesRoot to asset names
+      assetFileNames({ name }) {
+        return name.replace(/^src\//, "");
+      },
+
+      exports: "named",
       dir: "./dist/esm",
       format: "esm",
-    },
-    {
-      preserveModules: true,
-      entryFileNames: "[name].js",
-      assetFileNames({ name }) {
-        return name?.replace(/^src\//, "") ?? "";
-      },
-      dir: "./dist/cjs",
-      format: "cjs",
     },
   ],
 });
