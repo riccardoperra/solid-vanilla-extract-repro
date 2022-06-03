@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Vanilla extract repro bug",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "build:no-ve": "rollup -c rollup.config-no-ve.js"
   },
   "license": "MIT",
   "exports": {

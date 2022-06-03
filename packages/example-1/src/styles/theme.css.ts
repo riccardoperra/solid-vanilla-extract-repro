@@ -1,5 +1,4 @@
 import { createTheme } from "@vanilla-extract/css";
 import { themeColors } from "@ui/vanilla-extract-rollup";
 
-// export const customThemeLocal = createTheme(themeColors, { primary: "red" });
-export const customThemeLocal = "";
+export const customThemeLocal = createTheme(themeColors, { primary: "green" });
