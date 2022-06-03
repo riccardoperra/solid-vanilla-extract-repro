@@ -2,7 +2,7 @@
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
-var path = require("path");
+var path = require("path/posix");
 var vite = require("vite");
 var outdent = require("outdent");
 var integration = require("@vanilla-extract/integration");

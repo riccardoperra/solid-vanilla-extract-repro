@@ -10,9 +10,9 @@ globalStyle("body", {
     },
   },
 });
-
-export const testClass = style([
-  {
-    color: uiVariables.exampleVars.bg,
-  },
-]);
+//
+// export const testClass = style([
+//   {
+//     color: uiVariables.exampleVars.bg,
+//   },
+// ]);
