@@ -3,7 +3,7 @@ import { dependencies, peerDependencies } from "./package.json";
 
 const {
   vanillaExtractPlugin,
-} = require("./vanilla-extract-fix/vanilla-extract-plugin-rollup");
+} = require("./vanilla-extract-fix/vanilla-extract-rollup-plugin.cjs.prod");
 
 const externals = [
   ...Object.keys(peerDependencies),
@@ -16,7 +16,7 @@ const externals = [
 export default withSolid({
   input: "src/index.tsx",
   targets: ["esm", "cjs"],
-  plugins: [vanillaExtractPlugin()],
+  plugins: [vanillaExtractPlugin({ identifiers: "short" })],
   external: externals,
   output: [
     {
@@ -26,6 +26,7 @@ export default withSolid({
       entryFileNames({ name }) {
         return `${name.replace(/\.css$/, ".css.vanilla")}.js`;
       },
+
       // Apply preserveModulesRoot to asset names
       assetFileNames({ name }) {
         return name.replace(/^src\//, "");

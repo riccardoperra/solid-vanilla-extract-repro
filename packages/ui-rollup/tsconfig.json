@@ -1,22 +1,40 @@
 {
   "compilerOptions": {
+    "strict": true,
     "target": "ESNext",
     "module": "ESNext",
-    "strict": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "preserve",
-    "sourceMap": true,
     "jsxImportSource": "solid-js",
-    "noEmit": true,
-    "isolatedModules": true,
+    "declaration": true,
+    "sourceMap": true,
+    "importHelpers": true,
     "resolveJsonModule": true,
-    "preserveSymlinks": true,
-    "declaration": false,
+    "importsNotUsedAsValues": "remove",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "types": [
+      "vite/client"
+    ],
+    "lib": [
+      "dom",
+      "ESNext"
+    ]
   },
   "include": [
-    "./src",
-    "rollup.config.ts"
-  ]
+    "@types",
+    "packages",
+    "scripts"
+  ],
+  "exclude": ["**/node_modules"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "resolveJsonModule": true,
+      "types": ["node"],
+      "noImplicitAny": false
+    }
+  }
 }

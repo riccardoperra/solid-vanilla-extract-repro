@@ -12,7 +12,6 @@ globalStyle("body", {
 });
 
 export const testClass = style([
-  uiVariables.exampleTheme,
   {
     color: uiVariables.exampleVars.bg,
   },
